@@ -1,1 +1,18 @@
+version: 0.2
 
+phases:
+  install:
+    commands:
+      - pip install -r requirements.txt
+
+  build:
+    commands:
+      - echo "Training model..."
+      - python train.py
+
+      - echo "Evaluating model..."
+      - python evaluate.py
+
+artifacts:
+  files:
+    - '**/*'
