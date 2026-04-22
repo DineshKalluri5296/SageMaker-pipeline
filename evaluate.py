@@ -6,8 +6,8 @@ model = joblib.load("model.pkl")
 
 data = pd.read_csv("data.csv")
 
-X = data.drop("price", axis=1)
-y = data["price"]
+X = data.drop("Price", axis=1)
+y = data["Price"]
 
 preds = model.predict(X)
 
