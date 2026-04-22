@@ -6,6 +6,8 @@ import boto3
 
 # Load data
 data = pd.read_csv("s3://ml-project-buckets/data/USA_Housing (1).csv")
+data=data.drop(["Address"], axis=1)
+
 
 X = data.drop("price", axis=1)
 y = data["price"]
